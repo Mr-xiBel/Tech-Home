@@ -7607,11 +7607,36 @@ body:after {
   clear: both;
 }
 
+/* 新增开始 */
 html,
 body {
   height: 100%;
-}
+overflow: auto; /* 允许出现滚动条 */
+  }
 
+  
+  /* 定制滚动条样式 */
+  ::-webkit-scrollbar {
+    width: 10px; /* 滚动条宽度 */
+    height: 10px; /* 水平滚动条的高度（如果需要的话） */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* 滚动条轨道的颜色 */
+    border-radius: 10px; /* 轨道圆角 */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* 滚动条本身的颜色 */
+    border-radius: 10px; /* 滚动条圆角 */
+  }
+
+  /* 当鼠标悬停在滚动条上时的样式 */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* 滚动条悬停时的颜色 */
+  }
+
+/* 新增结束 */
 html {
   height: 100%;
   max-height: 100%;
